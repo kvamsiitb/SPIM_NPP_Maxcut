@@ -1,0 +1,3 @@
+Start with adjusting NDF and exposure time in the camera such that intensity under the area of interest has all 255 or most of them have 255 values using Pylon Viewer Application (for viewing an intensity profile via Basler camera) and showSLMprofile.py (for encoding the pattern on SLM).
+
+Then run the automation script "Calibration_v3.py" to make sure the pixels in the region of interest don't saturate to 255 values. The script will gradually reduce the exposure time such that there are no 255 values in the intensity profile captured on the camera. The calibration is on the SLM pattern with all the spin values +1 and all the number values of +1 as it provided the maximum intensity at the center pixels.
